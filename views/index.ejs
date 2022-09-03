@@ -1,0 +1,299 @@
+<main>
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-10 col-6 col-lg-6 col-md-6 mx-2 mx-lg-0 mx-md-0">
+        <h1 class="fw-light">Food recipe</h1>
+        <p class="lead text-muted">
+          This is a simple food recipe website, which will show you recipe of various food catagory.Just click on the explore to explore the various catagory of food recipe and enjoy the taste of delightfull magic on your toungh
+        </p>
+        <p>
+          <a href="/explore" class="btn btn-primary my-2">Explore</a>
+          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+        </p>
+      </div>
+      <div class="col-10 col-6 col-lg-6 col-md-6 mx-2 mx-lg-0 mx-md-0 my-auto">
+        <img src="./images/logo.jpg" class="img-fluid rounded" alt="loading" />
+      </div>
+    </div>
+  </section>
+
+  <hr />
+  <div class="containner-fluid text-center px-2">
+    <h2>Variety of Foods</h2>
+  </div>
+  <hr />
+
+  <div class="album py-2 bg-light">
+    <div class="container">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+
+        <% if(foodstyles != "") { %>
+          <% for(const element of foodstyles ){  %>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img
+              src=<%- element.image %>
+              class="img-fluid rounded"
+              alt="loading"
+            />
+
+            <div class="card-body">
+              <p class="card-text"><%- element.name %></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a class="text-decoration-none" href="/catagories/<%- element.name %>">Let's see</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+        <% } %>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img
+              src='/images/explore.jpg'
+              class="img-fluid rounded"
+              alt="loading"
+            />
+
+            <div class="card-body">
+              <p class="card-text">View More</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-secondary"
+                  >
+                    <a class="text-decoration-none" href="/catagories">Let's see</a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="containner-fluid text-center px-2">
+    <h2>Latest recipe</h2>
+  </div>
+  <hr />
+
+  <div class="album py-2 bg-light">
+    <div class="containner-fluid px-5">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+
+        <% if(recipies!='') { %>
+          <% for( const elements of recipies) { %>  
+        <div class="col">
+          <div class="card shadow-sm">
+            <a class="text-decoration-none" href= "/recipiess/<%- elements._id %>" >
+              <img
+                src=<%- elements.image %>
+                class="img-fluid rounded"
+                alt="loading"
+              />
+            </a>
+        </div>
+        <div class="text-center py-1">
+          <a class="text-dark text-decoration-none" href="#"
+            ><%- elements.name %></a
+          >
+          <p class="card-text"></p>
+        </div>
+        </div>
+
+        <% } %>
+        <% } %>
+
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="containner-fluid text-center px-2">
+    <h2>indian</h2>
+  </div>
+  <hr />
+
+  <div class="album py-2 bg-light">
+    <div class="containner-fluid px-5">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+
+        <% if(indian != '') { %>
+          <% for( const elements of indian) { %>  
+        <div class="col">
+          <div class="card shadow-sm">
+            <a class="text-decoration-none" href= "/recipiess/<%- elements._id %>" >
+              <img
+                src=<%- elements.image %>
+                class="img-fluid rounded"
+                alt="loading"
+              />
+            </a>
+        </div>
+        <div class="text-center py-1">
+          <a class="text-dark text-decoration-none" href="#"
+            ><%- elements.name %></a
+          >
+          <p class="card-text"></p>
+        </div>
+        </div>
+
+        <% } %>
+        <% } %>
+
+      </div>
+    </div>
+  </div>
+
+  <hr />
+  <div class="containner-fluid text-center px-2">
+    <h2>Chinese</h2>
+  </div>
+  <hr />
+
+  <div class="album py-2 bg-light">
+    <div class="containner-fluid px-5">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+
+        <% if(chinese != '') { %>
+          <% for( const elements of chinese) { %>  
+        <div class="col">
+          <div class="card shadow-sm">
+            <a class="text-decoration-none" href= "/recipiess/<%- elements._id %>" >
+              <img
+                src=<%- elements.image %>
+                class="img-fluid rounded"
+                alt="loading"
+              />
+            </a>
+        </div>
+        <div class="text-center py-1">
+          <a class="text-dark text-decoration-none" href="#"
+            ><%- elements.name %></a
+          >
+          <p class="card-text"></p>
+        </div>
+        </div>
+
+        <% } %>
+        <% } %>
+
+      </div>
+    </div>
+  </div>
+
+
+  <hr />
+  <div class="containner text-center px-2">
+    <h2>Submit Your Recipe</h2>
+  </div>
+  <hr />
+
+  <div class="container-fluid mx-0 my-5 row d-flex justify-content-center">
+    <div
+      id="carouselExampleDark"
+      class="col-10 carousel carousel-light slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#carouselExampleDark"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img
+            src=" ./images/food1.jpg"
+            class="d-block w-100"
+            height="500"
+            width="600"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>First slide label</h5>
+            <p>Some representative placeholder content for the first slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img
+            src="./images/food1.jpg"
+            class="d-block w-100"
+            height="500"
+            width="600"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Second slide label</h5>
+            <p>Some representative placeholder content for the second slide.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img
+            src="./images/food1.jpg"
+            class="d-block w-100"
+            height="500"
+            width="600"
+            alt="..."
+          />
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Third slide label</h5>
+            <p>Some representative placeholder content for the third slide.</p>
+          </div>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleDark"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="col-12 my-2 d-flex justify-content-center">
+      <button type="button" class="btn btn-primary btn-lg">
+        <a class="text-white text-decoration-none" href="/submit">Submit</a>
+      </button>
+    </div>
+  </div>
+</main>

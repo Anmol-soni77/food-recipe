@@ -1,0 +1,32 @@
+<div class="album py-2 bg-light">
+    <div class="containner-fluid px-5">
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-md-4 g-3">
+
+        <% if(recipee != '') { %>
+          <% for( const elements of recipee) { %>  
+        <div class="col">
+          <div class="card shadow-sm">
+            <a class="text-decoration-none" href= "/recipiess/<%- elements._id %>" >
+              <img
+                src=<%- elements.image %>
+                class="img-fluid rounded"
+                alt="loading"
+              />
+            </a>
+        </div>
+        <div class="text-center py-1">
+          <a class="text-dark text-decoration-none" href="#"
+            ><%- elements.name %></a
+          >
+          <p class="card-text"></p>
+        </div>
+        </div>
+
+        <% } %>
+        <% }else { %>
+            <h1 style="height: 100vh;">No result found</h1>
+            <% } %>
+
+      </div>
+    </div>
+  </div>

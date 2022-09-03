@@ -1,0 +1,26 @@
+<section class="py-5 text-center container">
+  <div class="row py-lg-5">
+    <div class="col-10 col-lg-4 col-md-8 mx-2 mb-2 mx-lg-0 mx-md-0 my-auto">
+      <img src=<%- viewrecipe.image %> class="img-fluid rounded" alt="loading" />
+    </div>
+    <div class="col-10 col-lg-8 col-md-8 mx-2 mx-lg-0 mx-md-0">
+        <hr>
+        <h1 class="fw-light"><%- viewrecipe.name %></h1>
+        <hr>
+        <p class="lead ">
+          <%- viewrecipe.description %>
+        </p>
+        <hr>
+        <h4 class="mb-3" >ingridients required :</h4>
+        <ol>
+        <% if( viewrecipe.ingridients != '' ) { %>
+          <% for(element of viewrecipe.ingridients ) { %>
+                <li>
+                <%- element %>
+              </li>
+              <% } %>
+            <% } %>
+            </ol>
+      </div>
+    </div>
+  </section>
